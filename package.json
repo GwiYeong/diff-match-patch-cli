@@ -1,12 +1,12 @@
 {
-  "name": "react-native-bundle-diff-match-patch",
+  "name": "diff-match-patch-cli",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@github.com:zephyrpersonal/react-native-bundle-diff-match-patch.git",
-  "author": "zephyr <zephyr.workmail@gmail.com>",
+  "repository": "https://github.com/gwiyeong/diff-match-patch-cli",
+  "author": "gwiyeong <jgy0726@gmail.com>",
   "license": "MIT",
   "bin": {
-    "rnbp": "cli.js"
+    "dmp": "cli.js"
   },
   "dependencies": {
     "commander": "^2.20.0",

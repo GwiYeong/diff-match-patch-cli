@@ -5,11 +5,11 @@ CLI tool to generate patch, apply patch, valid patch
 ## Install
 
 ```bash
-$ yarn global add react-native-bundle-diff-match-patch
+$ yarn global add diff-match-patch-cli
 
 //or
 
-$ npm install -g react-native-bundle-diff-match-patch
+$ npm install -g diff-match-patch-cli
 ```
 
 ## Usage
@@ -17,22 +17,22 @@ $ npm install -g react-native-bundle-diff-match-patch
 ### generate patch file
 
 ```bash
-$ rnbp generate old-bundle-path new-bundle-path -o patch-file-name
+$ dmp generate old-bundle-path new-bundle-path -o patch-file-name
 ```
 
 ### apply patch file
 
 ```bash
-$ rnbp patch old-bundle-path patch-file-name
+$ dmp patch old-file-name patch-file-name
 // this will generate a new file with a postfix .patched
+$ dmp patch old-file-name patch-file-name -o patched-file-name
 
-
-$ rnbp patch old-bundle-path patch-file-name -r
-// this will replace the old bundle file
+$ rnbp patch old-file-name patch-file-name -r
+// this will replace the old file
 ```
 
 ### check patch file is valid
 
 ```bash
-$ rnbp check-valid patch-file-name
+$ dmp check-valid patch-file-name
 ```

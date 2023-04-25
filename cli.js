@@ -5,18 +5,18 @@ const DMP = require('diff-match-patch')
 const { fs } = require('mz')
 
 const pkg = require('./package.json')
-const { generatePatch, patchFile, checkPatchValid } = require('./rnbp')
+const { generatePatch, patchFile, checkPatchValid } = require('./dmp')
 
 cli
   .version(pkg.version)
-  .command('generate <bundle-prev> <bundle-next>')
+  .command('generate <file-prev> <file-next>')
   .alias('g')
   .usage('generate a patch file from two bundle file')
-  .option('-o, --output', 'Patch file name')
+  .option('-o, --output <file-patch>', 'Patch file name')
   .action(generatePatch)
 
 cli
-  .command('patch <bundle-to-patch> <patch-file>')
+  .command('patch <file-to-patch> <patch-file>')
   .alias('p')
   .usage('patch a bundle file with a given patch file')
   .option('-r, --replace', 'Replace bundle file')
@@ -29,7 +29,6 @@ cli
   .action(checkPatchValid)
 
 cli.parse(process.argv)
-
 process.on('unhandledRejection', (e) => {
   console.error(e.message)
   process.exit(1)
