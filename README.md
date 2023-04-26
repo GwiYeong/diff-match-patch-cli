@@ -27,7 +27,7 @@ $ dmp patch old-file-name patch-file-name
 // this will generate a new file with a postfix .patched
 $ dmp patch old-file-name patch-file-name -o patched-file-name
 
-$ rnbp patch old-file-name patch-file-name -r
+$ dmp patch old-file-name patch-file-name -r
 // this will replace the old file
 ```
 
