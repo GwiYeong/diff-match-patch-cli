@@ -1,4 +1,4 @@
-# react-native-bundle-diff-match-patch
+# diff-match-patch-cli
 
 CLI tool to generate patch, apply patch, valid patch
 
